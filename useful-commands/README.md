@@ -4,3 +4,8 @@
 ```bash
 find <folder path> -type f -name "*.cc" | xargs grep "ORB-SLAM2:"
 ```
+2. 想要批量重命名一个文件夹下的所有文件的名字,可以使用如下操作(示例中是将所有图片重名为按照顺序递增新的名字,统一后缀为`.jpg`):
+```bash
+cd <your floder dir>
+i=1; for x in *; do mv $x $i.jpg; let i=i+1; done
+```
